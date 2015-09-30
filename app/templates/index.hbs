@@ -1,0 +1,13 @@
+<h2>Breweries</h2>
+
+{{#each breweries as |brewery|}}
+  <h3>{{brewery.name}} {{#if brewery.hasDirtyAttributes}}(dirty){{/if}}</h3>
+  {{input value=brewery.name}}
+  <button {{action 'saveBrewery' brewery }}>Save Brewery</button>
+  {{#each brewery.beers as |beer|}}
+    <p><strong>{{beer.name}}</strong> {{#if beer.hasDirtyAttributes}}(dirty){{/if}}</p>
+    {{input value=beer.name}}
+    <button {{action 'saveBeer' beer }}>Save Beer</button>
+{{/each}}
+<hr>
+{{/each}}
