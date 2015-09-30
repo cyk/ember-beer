@@ -6,6 +6,8 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('vendor/ember-data.dependent-relations.js')
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
